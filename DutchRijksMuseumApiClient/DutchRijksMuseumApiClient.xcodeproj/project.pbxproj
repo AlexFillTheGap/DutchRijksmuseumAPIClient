@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C17A0A2D29ED50600030372A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A2C29ED50600030372A /* ApiManager.swift */; };
+		C17A0A2F29ED506C0030372A /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A2E29ED506C0030372A /* ApiRouter.swift */; };
+		C17A0A3129ED50EB0030372A /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3029ED50EB0030372A /* NetworkSession.swift */; };
+		C17A0A3329ED51220030372A /* ServiceNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3229ED51220030372A /* ServiceNetworkSession.swift */; };
+		C17A0A3529ED516C0030372A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C17A0A3429ED516C0030372A /* Localizable.strings */; };
+		C17A0A3729ED519A0030372A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3629ED519A0030372A /* String+Extension.swift */; };
 		C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */; };
 		C17DB42729ED2CED00AE16D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42629ED2CED00AE16D0 /* SceneDelegate.swift */; };
 		C17DB42929ED2CED00AE16D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42829ED2CED00AE16D0 /* ViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C17A0A2C29ED50600030372A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		C17A0A2E29ED506C0030372A /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		C17A0A3029ED50EB0030372A /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		C17A0A3229ED51220030372A /* ServiceNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNetworkSession.swift; sourceTree = "<group>"; };
+		C17A0A3429ED516C0030372A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C17A0A3629ED519A0030372A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C17DB42129ED2CED00AE16D0 /* DutchRijksMuseumApiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchRijksMuseumApiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C17DB42629ED2CED00AE16D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +88,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C17A0A2929ED50120030372A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A2B29ED504C0030372A /* Session */,
+				C17A0A2A29ED50430030372A /* Resources */,
+				C17A0A2C29ED50600030372A /* ApiManager.swift */,
+				C17A0A2E29ED506C0030372A /* ApiRouter.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C17A0A2A29ED50430030372A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A3429ED516C0030372A /* Localizable.strings */,
+				C17A0A3629ED519A0030372A /* String+Extension.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C17A0A2B29ED504C0030372A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A3029ED50EB0030372A /* NetworkSession.swift */,
+				C17A0A3229ED51220030372A /* ServiceNetworkSession.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		C17DB41829ED2CED00AE16D0 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +140,7 @@
 		C17DB42329ED2CED00AE16D0 /* DutchRijksMuseumApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				C17A0A2929ED50120030372A /* Networking */,
 				C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */,
 				C17DB42629ED2CED00AE16D0 /* SceneDelegate.swift */,
 				C17DB42829ED2CED00AE16D0 /* ViewController.swift */,
@@ -232,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17DB43129ED2CEE00AE16D0 /* LaunchScreen.storyboard in Resources */,
+				C17A0A3529ED516C0030372A /* Localizable.strings in Resources */,
 				C17DB42E29ED2CEE00AE16D0 /* Assets.xcassets in Resources */,
 				C17DB42C29ED2CED00AE16D0 /* Main.storyboard in Resources */,
 			);
@@ -258,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17A0A3729ED519A0030372A /* String+Extension.swift in Sources */,
+				C17A0A2D29ED50600030372A /* ApiManager.swift in Sources */,
 				C17DB42929ED2CED00AE16D0 /* ViewController.swift in Sources */,
+				C17A0A2F29ED506C0030372A /* ApiRouter.swift in Sources */,
+				C17A0A3129ED50EB0030372A /* NetworkSession.swift in Sources */,
 				C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */,
+				C17A0A3329ED51220030372A /* ServiceNetworkSession.swift in Sources */,
 				C17DB42729ED2CED00AE16D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
