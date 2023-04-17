@@ -13,8 +13,19 @@
 		C17A0A3329ED51220030372A /* ServiceNetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3229ED51220030372A /* ServiceNetworkSession.swift */; };
 		C17A0A3529ED516C0030372A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C17A0A3429ED516C0030372A /* Localizable.strings */; };
 		C17A0A3729ED519A0030372A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3629ED519A0030372A /* String+Extension.swift */; };
+		C17A0A3C29ED59470030372A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3B29ED59470030372A /* CollectionViewController.swift */; };
+		C17A0A3E29ED59540030372A /* CollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3D29ED59540030372A /* CollectionPresenter.swift */; };
+		C17A0A4029ED59600030372A /* CollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3F29ED59600030372A /* CollectionInteractor.swift */; };
+		C17A0A4329ED5CB90030372A /* CollectionDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4229ED5CB90030372A /* CollectionDataRequest.swift */; };
+		C17A0A4529ED5CCD0030372A /* CollectionDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4429ED5CCD0030372A /* CollectionDataResponse.swift */; };
+		C17A0A4729ED5CE00030372A /* CollectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4629ED5CE00030372A /* CollectionDataModel.swift */; };
+		C17A0A4A29ED91510030372A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4929ED91510030372A /* DetailViewController.swift */; };
+		C17A0A4C29ED915F0030372A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4B29ED915F0030372A /* DetailPresenter.swift */; };
+		C17A0A4E29ED91760030372A /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4D29ED91760030372A /* DetailInteractor.swift */; };
+		C17A0A5029ED931C0030372A /* DetailDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A4F29ED931C0030372A /* DetailDataRequest.swift */; };
+		C17A0A5229ED932D0030372A /* DetailDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5129ED932D0030372A /* DetailDataResponse.swift */; };
+		C17A0A5429ED933D0030372A /* DetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5329ED933D0030372A /* DetailDataModel.swift */; };
 		C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */; };
-		C17DB42729ED2CED00AE16D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42629ED2CED00AE16D0 /* SceneDelegate.swift */; };
 		C17DB42929ED2CED00AE16D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42829ED2CED00AE16D0 /* ViewController.swift */; };
 		C17DB42C29ED2CED00AE16D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17DB42A29ED2CED00AE16D0 /* Main.storyboard */; };
 		C17DB42E29ED2CEE00AE16D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */; };
@@ -48,9 +59,20 @@
 		C17A0A3229ED51220030372A /* ServiceNetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNetworkSession.swift; sourceTree = "<group>"; };
 		C17A0A3429ED516C0030372A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		C17A0A3629ED519A0030372A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		C17A0A3B29ED59470030372A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		C17A0A3D29ED59540030372A /* CollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPresenter.swift; sourceTree = "<group>"; };
+		C17A0A3F29ED59600030372A /* CollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionInteractor.swift; sourceTree = "<group>"; };
+		C17A0A4229ED5CB90030372A /* CollectionDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataRequest.swift; sourceTree = "<group>"; };
+		C17A0A4429ED5CCD0030372A /* CollectionDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataResponse.swift; sourceTree = "<group>"; };
+		C17A0A4629ED5CE00030372A /* CollectionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataModel.swift; sourceTree = "<group>"; };
+		C17A0A4929ED91510030372A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C17A0A4B29ED915F0030372A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		C17A0A4D29ED91760030372A /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		C17A0A4F29ED931C0030372A /* DetailDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataRequest.swift; sourceTree = "<group>"; };
+		C17A0A5129ED932D0030372A /* DetailDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataResponse.swift; sourceTree = "<group>"; };
+		C17A0A5329ED933D0030372A /* DetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModel.swift; sourceTree = "<group>"; };
 		C17DB42129ED2CED00AE16D0 /* DutchRijksMuseumApiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchRijksMuseumApiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C17DB42629ED2CED00AE16D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C17DB42829ED2CED00AE16D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C17DB42B29ED2CED00AE16D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +139,57 @@
 			path = Session;
 			sourceTree = "<group>";
 		};
+		C17A0A3829ED58E00030372A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A3929ED59150030372A /* CollectionScene */,
+				C17A0A3A29ED59220030372A /* DetailScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C17A0A3929ED59150030372A /* CollectionScene */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A4129ED5B2B0030372A /* Model */,
+				C17A0A3B29ED59470030372A /* CollectionViewController.swift */,
+				C17A0A3D29ED59540030372A /* CollectionPresenter.swift */,
+				C17A0A3F29ED59600030372A /* CollectionInteractor.swift */,
+			);
+			path = CollectionScene;
+			sourceTree = "<group>";
+		};
+		C17A0A3A29ED59220030372A /* DetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A4829ED913B0030372A /* Model */,
+				C17A0A4929ED91510030372A /* DetailViewController.swift */,
+				C17A0A4B29ED915F0030372A /* DetailPresenter.swift */,
+				C17A0A4D29ED91760030372A /* DetailInteractor.swift */,
+			);
+			path = DetailScene;
+			sourceTree = "<group>";
+		};
+		C17A0A4129ED5B2B0030372A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A4229ED5CB90030372A /* CollectionDataRequest.swift */,
+				C17A0A4429ED5CCD0030372A /* CollectionDataResponse.swift */,
+				C17A0A4629ED5CE00030372A /* CollectionDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C17A0A4829ED913B0030372A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A4F29ED931C0030372A /* DetailDataRequest.swift */,
+				C17A0A5129ED932D0030372A /* DetailDataResponse.swift */,
+				C17A0A5329ED933D0030372A /* DetailDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C17DB41829ED2CED00AE16D0 = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +213,9 @@
 		C17DB42329ED2CED00AE16D0 /* DutchRijksMuseumApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				C17A0A3829ED58E00030372A /* Scenes */,
 				C17A0A2929ED50120030372A /* Networking */,
 				C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */,
-				C17DB42629ED2CED00AE16D0 /* SceneDelegate.swift */,
 				C17DB42829ED2CED00AE16D0 /* ViewController.swift */,
 				C17DB42A29ED2CED00AE16D0 /* Main.storyboard */,
 				C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */,
@@ -301,14 +374,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17A0A5429ED933D0030372A /* DetailDataModel.swift in Sources */,
+				C17A0A3C29ED59470030372A /* CollectionViewController.swift in Sources */,
 				C17A0A3729ED519A0030372A /* String+Extension.swift in Sources */,
 				C17A0A2D29ED50600030372A /* ApiManager.swift in Sources */,
 				C17DB42929ED2CED00AE16D0 /* ViewController.swift in Sources */,
+				C17A0A4029ED59600030372A /* CollectionInteractor.swift in Sources */,
+				C17A0A5029ED931C0030372A /* DetailDataRequest.swift in Sources */,
+				C17A0A4729ED5CE00030372A /* CollectionDataModel.swift in Sources */,
+				C17A0A4329ED5CB90030372A /* CollectionDataRequest.swift in Sources */,
 				C17A0A2F29ED506C0030372A /* ApiRouter.swift in Sources */,
+				C17A0A4C29ED915F0030372A /* DetailPresenter.swift in Sources */,
+				C17A0A4529ED5CCD0030372A /* CollectionDataResponse.swift in Sources */,
+				C17A0A5229ED932D0030372A /* DetailDataResponse.swift in Sources */,
 				C17A0A3129ED50EB0030372A /* NetworkSession.swift in Sources */,
+				C17A0A3E29ED59540030372A /* CollectionPresenter.swift in Sources */,
 				C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */,
 				C17A0A3329ED51220030372A /* ServiceNetworkSession.swift in Sources */,
-				C17DB42729ED2CED00AE16D0 /* SceneDelegate.swift in Sources */,
+				C17A0A4A29ED91510030372A /* DetailViewController.swift in Sources */,
+				C17A0A4E29ED91760030372A /* DetailInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
