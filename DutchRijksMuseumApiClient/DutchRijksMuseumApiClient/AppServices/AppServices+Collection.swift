@@ -9,7 +9,7 @@ import Foundation
 
 extension AppServices {
   
-  public func collectionsArts(completionHandler: @escaping ([CollectionDataModel]?, NSError?) -> Void) {
+  public func collectionsArts(completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void) {
     let route = CollectionRouting.collection
     apiManager.performURLRequest(from: route) { data, error in
       if error != nil {
@@ -19,7 +19,7 @@ extension AppServices {
         
         do {
           let collection = try JSONDecoder().decode(CollectionResult.self, from: responseData)
-          completionHandler(self.methodMapCollectionResult(collection: collection), nil)
+          completionHandler(self.methodMapCollectionResult(collection: collection, pageNumber: 0), nil)
         } catch {
           print("JSONSerialization error:", error)
         }
@@ -27,7 +27,7 @@ extension AppServices {
     }
   }
   
-  public func collectionPage(pageNumber: Int, completionHandler: @escaping ([CollectionDataModel]?, NSError?) -> Void) {
+  public func collectionPage(pageNumber: Int, completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void) {
     let route = CollectionRouting.collectionPage(page: pageNumber)
     apiManager.performURLRequest(from: route) { data, error in
       if error != nil {
@@ -37,7 +37,7 @@ extension AppServices {
         
         do {
           let collection = try JSONDecoder().decode(CollectionResult.self, from: responseData)
-          completionHandler(self.methodMapCollectionResult(collection: collection), nil)
+          completionHandler(self.methodMapCollectionResult(collection: collection, pageNumber: pageNumber), nil)
         } catch {
           print("JSONSerialization error:", error)
         }
@@ -50,10 +50,19 @@ extension AppServices {
   }
   
   
-  private func methodMapCollectionResult(collection: CollectionResult) -> [CollectionDataModel]{
-    collection.artObjects?.map({ artObject in
-      CollectionDataModel(title: artObject.title ?? "", image: artObject.webImage?.url ?? "", width: artObject.webImage?.width ?? 0, height: artObject.webImage?.height ?? 0, author: artObject.principalMaker ?? "")
-    }) ?? []
+  private func methodMapCollectionResult(collection: CollectionResult, pageNumber: Int) -> CollectionDataResponse{
+    let visited = collectionRepository.getVisited()
+    
+    return CollectionDataResponse(collectionDataList: collection.artObjects?.map({ artObject in
+      CollectionResponseItem(artObjectId: artObject.objectNumber ?? "",
+                             title: artObject.title ?? "",
+                             image: artObject.webImage?.url ?? "",
+                             width: artObject.webImage?.width ?? 0,
+                             height: artObject.webImage?.height ?? 0,
+                             author: artObject.principalMaker ?? ""
+      )
+    }) ?? [], collectionVisitedList: visited, pageNumber: pageNumber)
+    
   }
   
 }

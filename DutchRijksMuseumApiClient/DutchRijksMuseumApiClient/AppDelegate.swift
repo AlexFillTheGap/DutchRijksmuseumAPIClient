@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
     let navigationCon = UINavigationController.init()
     
-    let initialVC = CollectionViewController().configureViewController()
+    let initialVC = CollectionViewController().configureViewController(appService: AppServices())
 
     navigationCon.pushViewController(initialVC, animated: true)
     window!.rootViewController = navigationCon

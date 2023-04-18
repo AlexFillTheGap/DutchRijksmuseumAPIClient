@@ -16,10 +16,21 @@ public enum CollectionRouting: APIRouter {
     switch self {
     case .collection:
       return "/collection?"
-    case .collectionPage(page: Int)
-      return "/collection?p=\(page)"
+    case .collectionPage:
+      return "/collection?"
     }
     
+  }
+  
+  public var queryParameters: [String: Any]? {
+    switch self {
+    case .collection:
+      return [:]
+    case let .collectionPage(page: page):
+      return [
+        "p": page
+      ]
+    }
   }
   
   public var httpMethod: APIHTTPMethod {

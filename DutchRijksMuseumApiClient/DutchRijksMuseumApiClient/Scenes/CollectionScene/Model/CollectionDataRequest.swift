@@ -8,5 +8,5 @@
 import Foundation
 
 public struct CollectionDataRequest {
-  let selectedItemID: String
+  let selectedItem: CollectionDataItem
 }

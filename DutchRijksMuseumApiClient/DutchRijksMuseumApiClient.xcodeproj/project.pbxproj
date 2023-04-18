@@ -33,9 +33,12 @@
 		C17A0A6429ED9DA10030372A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6329ED9DA10030372A /* Link.swift */; };
 		C17A0A6629ED9DAC0030372A /* WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6529ED9DAC0030372A /* WebImage.swift */; };
 		C17A0A6929ED9DC50030372A /* CollectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6829ED9DC50030372A /* CollectionResult.swift */; };
+		C17A0A6C29EDAFBC0030372A /* ArtViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6B29EDAFBC0030372A /* ArtViewCell.swift */; };
+		C17A0A6F29EDB0220030372A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6E29EDB0220030372A /* UIImageView+Extension.swift */; };
+		C17A0A7129EDC0DE0030372A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A7029EDC0DE0030372A /* UIViewController+Extension.swift */; };
+		C17A0A7329EDC1710030372A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A7229EDC1710030372A /* LoadingView.swift */; };
+		C17A0A7529EDC9D30030372A /* CollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A7429EDC9D30030372A /* CollectionHeader.swift */; };
 		C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */; };
-		C17DB42929ED2CED00AE16D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42829ED2CED00AE16D0 /* ViewController.swift */; };
-		C17DB42C29ED2CED00AE16D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17DB42A29ED2CED00AE16D0 /* Main.storyboard */; };
 		C17DB42E29ED2CEE00AE16D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */; };
 		C17DB43129ED2CEE00AE16D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C17DB42F29ED2CEE00AE16D0 /* LaunchScreen.storyboard */; };
 		C17DB43C29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB43B29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests.swift */; };
@@ -87,10 +90,13 @@
 		C17A0A6329ED9DA10030372A /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		C17A0A6529ED9DAC0030372A /* WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImage.swift; sourceTree = "<group>"; };
 		C17A0A6829ED9DC50030372A /* CollectionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionResult.swift; sourceTree = "<group>"; };
+		C17A0A6B29EDAFBC0030372A /* ArtViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewCell.swift; sourceTree = "<group>"; };
+		C17A0A6E29EDB0220030372A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		C17A0A7029EDC0DE0030372A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		C17A0A7229EDC1710030372A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C17A0A7429EDC9D30030372A /* CollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeader.swift; sourceTree = "<group>"; };
 		C17DB42129ED2CED00AE16D0 /* DutchRijksMuseumApiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchRijksMuseumApiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C17DB42829ED2CED00AE16D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C17DB42B29ED2CED00AE16D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C17DB43029ED2CEE00AE16D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C17DB43229ED2CEE00AE16D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 		C17A0A3829ED58E00030372A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C17A0A6A29EDAFA60030372A /* Views */,
 				C17A0A3929ED59150030372A /* CollectionScene */,
 				C17A0A3A29ED59220030372A /* DetailScene */,
 			);
@@ -169,8 +176,8 @@
 			children = (
 				C17A0A4129ED5B2B0030372A /* Model */,
 				C17A0A3B29ED59470030372A /* CollectionViewController.swift */,
-				C17A0A3D29ED59540030372A /* CollectionPresenter.swift */,
 				C17A0A3F29ED59600030372A /* CollectionInteractor.swift */,
+				C17A0A3D29ED59540030372A /* CollectionPresenter.swift */,
 			);
 			path = CollectionScene;
 			sourceTree = "<group>";
@@ -252,6 +259,25 @@
 			path = Result;
 			sourceTree = "<group>";
 		};
+		C17A0A6A29EDAFA60030372A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A6B29EDAFBC0030372A /* ArtViewCell.swift */,
+				C17A0A7229EDC1710030372A /* LoadingView.swift */,
+				C17A0A7429EDC9D30030372A /* CollectionHeader.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C17A0A6D29EDB0070030372A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C17A0A6E29EDB0220030372A /* UIImageView+Extension.swift */,
+				C17A0A7029EDC0DE0030372A /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C17DB41829ED2CED00AE16D0 = {
 			isa = PBXGroup;
 			children = (
@@ -275,13 +301,12 @@
 		C17DB42329ED2CED00AE16D0 /* DutchRijksMuseumApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				C17A0A6D29EDB0070030372A /* Extensions */,
 				C17A0A5A29ED99C10030372A /* Repository */,
 				C17A0A5529ED990E0030372A /* AppServices */,
 				C17A0A3829ED58E00030372A /* Scenes */,
 				C17A0A2929ED50120030372A /* Networking */,
 				C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */,
-				C17DB42829ED2CED00AE16D0 /* ViewController.swift */,
-				C17DB42A29ED2CED00AE16D0 /* Main.storyboard */,
 				C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */,
 				C17DB42F29ED2CEE00AE16D0 /* LaunchScreen.storyboard */,
 				C17DB43229ED2CEE00AE16D0 /* Info.plist */,
@@ -413,7 +438,6 @@
 				C17DB43129ED2CEE00AE16D0 /* LaunchScreen.storyboard in Resources */,
 				C17A0A3529ED516C0030372A /* Localizable.strings in Resources */,
 				C17DB42E29ED2CEE00AE16D0 /* Assets.xcassets in Resources */,
-				C17DB42C29ED2CED00AE16D0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,12 +464,15 @@
 			files = (
 				C17A0A5429ED933D0030372A /* DetailDataModel.swift in Sources */,
 				C17A0A5C29ED99D30030372A /* CollectionRepository.swift in Sources */,
+				C17A0A7529EDC9D30030372A /* CollectionHeader.swift in Sources */,
+				C17A0A6F29EDB0220030372A /* UIImageView+Extension.swift in Sources */,
 				C17A0A6629ED9DAC0030372A /* WebImage.swift in Sources */,
+				C17A0A7129EDC0DE0030372A /* UIViewController+Extension.swift in Sources */,
 				C17A0A3C29ED59470030372A /* CollectionViewController.swift in Sources */,
 				C17A0A3729ED519A0030372A /* String+Extension.swift in Sources */,
+				C17A0A6C29EDAFBC0030372A /* ArtViewCell.swift in Sources */,
 				C17A0A6429ED9DA10030372A /* Link.swift in Sources */,
 				C17A0A2D29ED50600030372A /* ApiManager.swift in Sources */,
-				C17DB42929ED2CED00AE16D0 /* ViewController.swift in Sources */,
 				C17A0A6029ED9A990030372A /* CollectionRouting.swift in Sources */,
 				C17A0A4029ED59600030372A /* CollectionInteractor.swift in Sources */,
 				C17A0A5029ED931C0030372A /* DetailDataRequest.swift in Sources */,
@@ -459,6 +486,7 @@
 				C17A0A3129ED50EB0030372A /* NetworkSession.swift in Sources */,
 				C17A0A6229ED9D940030372A /* ArtObject.swift in Sources */,
 				C17A0A5E29ED9A680030372A /* AppServices+Collection.swift in Sources */,
+				C17A0A7329EDC1710030372A /* LoadingView.swift in Sources */,
 				C17A0A3E29ED59540030372A /* CollectionPresenter.swift in Sources */,
 				C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */,
 				C17A0A3329ED51220030372A /* ServiceNetworkSession.swift in Sources */,
@@ -501,14 +529,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C17DB42A29ED2CED00AE16D0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C17DB42B29ED2CED00AE16D0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C17DB42F29ED2CEE00AE16D0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -646,7 +666,7 @@
 				INFOPLIST_FILE = DutchRijksMuseumApiClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -677,7 +697,7 @@
 				INFOPLIST_FILE = DutchRijksMuseumApiClient/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

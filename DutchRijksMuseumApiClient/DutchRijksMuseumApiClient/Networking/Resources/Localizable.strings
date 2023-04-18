@@ -12,3 +12,10 @@
 "response_format_message" = "Error with response format. Please try the operation again. If it keeps failing contact support.";
 "request_build_title" = "Error when creating request";
 "request_build_message" = "Please try the operation again. If it keeps failing contact support.";
+
+"loading_text" = "Please wait...";
+"collection_title" = "Art objects in museum";
+"minus_button_title" = "Prev";
+"plus_button_title" = "Next";
+"arts_header_title"= "The art objects";
+"visited_header_title" = "Visited";
