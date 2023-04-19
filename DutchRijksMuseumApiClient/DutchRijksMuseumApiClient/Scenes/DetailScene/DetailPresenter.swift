@@ -8,9 +8,36 @@
 import Foundation
 
 protocol DetailPresenterProtocol {
- 
+  func setupObjetData(response: DetailDataResponse)
+  func makeShowLoading()
+  func makeHideLoading()
+  func showErrorAlert(title: String?, message: String?)
 }
 
 class DetailPresenter: DetailPresenterProtocol {
   var view: DetailViewControllerProtocol?
+  
+  func makeShowLoading() {
+    view?.needToShowLoading()
+  }
+  
+  func makeHideLoading() {
+    view?.needToHideLoading()
+  }
+  
+  func setupObjetData(response: DetailDataResponse) {
+    view?.setupArtObject(
+      artObjects: DetailDataModel(
+        selectedItemID: response.artObject.id ?? "",
+        imageUrl: response.artObject.webImage?.url ?? "",
+        title: response.artObject.title ?? "",
+        author: response.artObject.principalMakers?.first?.name ?? "",
+        description: response.artObject.label?.description ?? ""
+      )
+    )
+  }
+  
+  func showErrorAlert(title: String?, message: String?) {
+    view?.showAlert(title: title, message: message)
+  }
 }

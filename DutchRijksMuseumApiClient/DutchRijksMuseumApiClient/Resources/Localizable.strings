@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  DutchRijksMuseumApiClient
+
+  Created by Alejandro Fernandez Ruiz on 17/4/23.
+  
+*/
+"data_error_title" = "Search Error";
+"data_error_message" = "The object searched for does not exist";
+"response_format_title" = "Error with response format";
+"request_error_title" = "Server error";
+"request_error_message" = "There is a problem with the service";
+"response_format_message" = "Error with response format. Please try the operation again. If it keeps failing contact support.";
+"request_timeout" = "The request has taken too long";
+"request_build_title" = "Error when creating request";
+"request_build_message" = "Please try the operation again. If it keeps failing contact support.";
+"response_serialization_title" = "Serialization error";
+"response_serialization_message" = "The response received could not be parsed in valid format";
+"request_unknown" = "Unknown error";
+"alert_ok" = "OK";
+
+"loading_text" = "Please wait...";
+"collection_title" = "The RijksMuseum art";
+"minus_button_title" = "Prev";
+"plus_button_title" = "Next";
+"arts_header_title"= "The art objects. Page: %d";
+
+"back_button_title" = "Back";
+"detail_author_title" = "Author";
+"detail_description_title" = "Description";

@@ -8,5 +8,15 @@
 import Foundation
 
 public struct CollectionDataResponse {
-  let selectedItemID: String
+  var collectionDataList: [CollectionResponseItem]
+  var pageNumber: Int
+}
+
+public struct CollectionResponseItem {
+  let artObjectId: String
+  let title: String
+  let image: String
+  let width: Int
+  let height: Int
+  let author: String
 }
