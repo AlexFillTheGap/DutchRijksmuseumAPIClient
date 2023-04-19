@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkSession: AnyObject {
-  func doRequest(for req: URLRequest, completionHandler : @escaping (Data?, NSError?)-> Void)
+  func doRequest(for req: URLRequest, completionHandler: @escaping (Data?, NSError?) -> Void)
 }

@@ -8,7 +8,6 @@
 import Foundation
 
 public enum CollectionRouting: APIRouter {
-  
   case collection
   case collectionPage(page: Int)
   
@@ -19,7 +18,6 @@ public enum CollectionRouting: APIRouter {
     case .collectionPage:
       return "/collection?"
     }
-    
   }
   
   public var queryParameters: [String: Any]? {
@@ -40,5 +38,4 @@ public enum CollectionRouting: APIRouter {
   public var userAuthentication: Bool {
     false
   }
-  
 }

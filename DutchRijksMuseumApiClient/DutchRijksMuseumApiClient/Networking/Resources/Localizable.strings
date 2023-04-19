@@ -14,8 +14,11 @@
 "request_build_message" = "Please try the operation again. If it keeps failing contact support.";
 
 "loading_text" = "Please wait...";
-"collection_title" = "Art objects in museum";
+"collection_title" = "The RijksMuseum art";
 "minus_button_title" = "Prev";
 "plus_button_title" = "Next";
-"arts_header_title"= "The art objects";
-"visited_header_title" = "Visited";
+"arts_header_title"= "The art objects. Page: %d";
+
+"back_button_title" = "Back";
+"detail_author_title" = "Author";
+"detail_description_title" = "Description";

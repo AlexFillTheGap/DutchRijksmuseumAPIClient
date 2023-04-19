@@ -8,9 +8,7 @@
 import Foundation
 
 struct CollectionResult: Codable {
-  
-    let elapsedMilliseconds: Int?
-    let count: Int?
-    let artObjects: [ArtObject]?
-  
+  let elapsedMilliseconds: Int?
+  let count: Int?
+  let artObjects: [ArtObject]?
 }

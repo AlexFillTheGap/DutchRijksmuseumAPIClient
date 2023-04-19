@@ -8,5 +8,5 @@
 import Foundation
 
 struct Links: Codable {
-    let search: String?
+  let search: String?
 }

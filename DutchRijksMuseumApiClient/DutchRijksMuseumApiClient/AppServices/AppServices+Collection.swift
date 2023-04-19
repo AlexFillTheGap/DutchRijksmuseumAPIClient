@@ -8,7 +8,6 @@
 import Foundation
 
 extension AppServices {
-  
   public func collectionsArts(completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void) {
     let route = CollectionRouting.collection
     apiManager.performURLRequest(from: route) { data, error in
@@ -27,7 +26,10 @@ extension AppServices {
     }
   }
   
-  public func collectionPage(pageNumber: Int, completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void) {
+  public func collectionPage(
+    pageNumber: Int,
+    completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void
+  ) {
     let route = CollectionRouting.collectionPage(page: pageNumber)
     apiManager.performURLRequest(from: route) { data, error in
       if error != nil {
@@ -45,24 +47,17 @@ extension AppServices {
     }
   }
   
-  public func lastUsedElements(completionHandler: @escaping ([CollectionDataModel]?, NSError?) -> Void) {
-    
+  private func methodMapCollectionResult(collection: CollectionResult, pageNumber: Int) -> CollectionDataResponse {
+    return CollectionDataResponse(
+      collectionDataList: collection.artObjects?.map { artObject in
+        CollectionResponseItem(
+          artObjectId: artObject.objectNumber ?? "",
+          title: artObject.title ?? "",
+          image: artObject.headerImage?.url ?? "",
+          width: artObject.headerImage?.width ?? 0,
+          height: artObject.headerImage?.height ?? 0,
+          author: artObject.principalMaker ?? ""
+        )
+      } ?? [], pageNumber: pageNumber)
   }
-  
-  
-  private func methodMapCollectionResult(collection: CollectionResult, pageNumber: Int) -> CollectionDataResponse{
-    let visited = collectionRepository.getVisited()
-    
-    return CollectionDataResponse(collectionDataList: collection.artObjects?.map({ artObject in
-      CollectionResponseItem(artObjectId: artObject.objectNumber ?? "",
-                             title: artObject.title ?? "",
-                             image: artObject.webImage?.url ?? "",
-                             width: artObject.webImage?.width ?? 0,
-                             height: artObject.webImage?.height ?? 0,
-                             author: artObject.principalMaker ?? ""
-      )
-    }) ?? [], collectionVisitedList: visited, pageNumber: pageNumber)
-    
-  }
-  
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 public struct DetailDataResponse {
-  let selectedItemID: String
+  let artObject: ArtObject
 }

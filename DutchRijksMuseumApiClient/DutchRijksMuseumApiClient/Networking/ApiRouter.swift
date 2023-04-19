@@ -83,7 +83,7 @@ public extension APIRouter {
       components.queryItems = queryItems.sorted { $0.name < $1.name }
     } else {
       components.queryItems = [
-        URLQueryItem(name: "key", value: apiKey),
+        URLQueryItem(name: "key", value: apiKey)
       ]
     }
     

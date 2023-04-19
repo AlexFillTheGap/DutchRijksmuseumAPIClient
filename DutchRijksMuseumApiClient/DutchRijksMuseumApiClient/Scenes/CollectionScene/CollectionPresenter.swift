@@ -8,26 +8,27 @@
 import Foundation
 
 protocol CollectionPresenterProtocol {
-  func setupCollectionData(data: CollectionDataResponse, visited: [CollectionDataItem], pageNumber: Int)
+  func setupCollectionData(data: CollectionDataResponse, pageNumber: Int)
   func makeShowLoading()
   func makeHideLoading()
+  func performDetailNavigation(detailItem: CollectionDataItem)
 }
 
 class CollectionPresenter: CollectionPresenterProtocol {
+  var view: (CollectionViewControllerProtocol & CollectionViewControllerNavigation)?
   
-  var view: CollectionViewControllerProtocol?
-  
-  func setupCollectionData(data: CollectionDataResponse, visited: [CollectionDataItem], pageNumber: Int) {
-    let artObjects = CollectionDataModel(collectionDataList: data.collectionDataList.map { item in
-      CollectionDataItem(
-        artObjectId: item.artObjectId ,
-        title: item.title,
-        image: item.image,
-        width: item.width,
-        height: item.height,
-        author: item.author
-      )
-    }, collectionVisitedList: visited, pageNumber: pageNumber)
+  func setupCollectionData(data: CollectionDataResponse, pageNumber: Int) {
+    let artObjects = CollectionDataModel(
+      collectionDataList: data.collectionDataList.map { item in
+        CollectionDataItem(
+          artObjectId: item.artObjectId,
+          title: item.title,
+          image: item.image,
+          width: item.width,
+          height: item.height,
+          author: item.author
+        )
+      }, pageNumber: pageNumber)
     self.view?.setupArtObjects(artObjects: artObjects)
   }
   
@@ -37,5 +38,9 @@ class CollectionPresenter: CollectionPresenterProtocol {
   
   func makeHideLoading() {
     view?.needToHideLoading()
+  }
+  
+  func performDetailNavigation(detailItem: CollectionDataItem) {
+    view?.goToDetail(item: detailItem)
   }
 }

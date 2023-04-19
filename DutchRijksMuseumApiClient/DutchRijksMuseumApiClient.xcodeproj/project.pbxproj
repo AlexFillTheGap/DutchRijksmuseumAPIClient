@@ -26,7 +26,6 @@
 		C17A0A5229ED932D0030372A /* DetailDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5129ED932D0030372A /* DetailDataResponse.swift */; };
 		C17A0A5429ED933D0030372A /* DetailDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5329ED933D0030372A /* DetailDataModel.swift */; };
 		C17A0A5929ED99560030372A /* AppServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5829ED99560030372A /* AppServices.swift */; };
-		C17A0A5C29ED99D30030372A /* CollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5B29ED99D30030372A /* CollectionRepository.swift */; };
 		C17A0A5E29ED9A680030372A /* AppServices+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5D29ED9A680030372A /* AppServices+Collection.swift */; };
 		C17A0A6029ED9A990030372A /* CollectionRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A5F29ED9A990030372A /* CollectionRouting.swift */; };
 		C17A0A6229ED9D940030372A /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6129ED9D940030372A /* ArtObject.swift */; };
@@ -36,7 +35,6 @@
 		C17A0A6C29EDAFBC0030372A /* ArtViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6B29EDAFBC0030372A /* ArtViewCell.swift */; };
 		C17A0A6F29EDB0220030372A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A6E29EDB0220030372A /* UIImageView+Extension.swift */; };
 		C17A0A7129EDC0DE0030372A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A7029EDC0DE0030372A /* UIViewController+Extension.swift */; };
-		C17A0A7329EDC1710030372A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A7229EDC1710030372A /* LoadingView.swift */; };
 		C17A0A7529EDC9D30030372A /* CollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A7429EDC9D30030372A /* CollectionHeader.swift */; };
 		C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */; };
 		C17DB42E29ED2CEE00AE16D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */; };
@@ -44,6 +42,13 @@
 		C17DB43C29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB43B29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests.swift */; };
 		C17DB44629ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB44529ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITests.swift */; };
 		C17DB44829ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17DB44729ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITestsLaunchTests.swift */; };
+		C186ED2B29EEADA50051EC70 /* AppServices+Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186ED2A29EEADA50051EC70 /* AppServices+Detail.swift */; };
+		C186ED2D29EEAE180051EC70 /* DetailRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186ED2C29EEAE180051EC70 /* DetailRouting.swift */; };
+		C186ED2F29EEB0130051EC70 /* DetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186ED2E29EEB0130051EC70 /* DetailResult.swift */; };
+		C186ED3129EEB1520051EC70 /* PrincipalMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186ED3029EEB1520051EC70 /* PrincipalMaker.swift */; };
+		C186ED3329EEB2090051EC70 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186ED3229EEB2090051EC70 /* Label.swift */; };
+		C186ED3529EEBBF20051EC70 /* HeaderImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C186ED3429EEBBF20051EC70 /* HeaderImage.swift */; };
+		C187FCAE29EFC92900385CA6 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C187FCAD29EFC92900385CA6 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +88,6 @@
 		C17A0A5129ED932D0030372A /* DetailDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataResponse.swift; sourceTree = "<group>"; };
 		C17A0A5329ED933D0030372A /* DetailDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDataModel.swift; sourceTree = "<group>"; };
 		C17A0A5829ED99560030372A /* AppServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServices.swift; sourceTree = "<group>"; };
-		C17A0A5B29ED99D30030372A /* CollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRepository.swift; sourceTree = "<group>"; };
 		C17A0A5D29ED9A680030372A /* AppServices+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppServices+Collection.swift"; sourceTree = "<group>"; };
 		C17A0A5F29ED9A990030372A /* CollectionRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionRouting.swift; sourceTree = "<group>"; };
 		C17A0A6129ED9D940030372A /* ArtObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
@@ -93,7 +97,6 @@
 		C17A0A6B29EDAFBC0030372A /* ArtViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtViewCell.swift; sourceTree = "<group>"; };
 		C17A0A6E29EDB0220030372A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		C17A0A7029EDC0DE0030372A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		C17A0A7229EDC1710030372A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C17A0A7429EDC9D30030372A /* CollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeader.swift; sourceTree = "<group>"; };
 		C17DB42129ED2CED00AE16D0 /* DutchRijksMuseumApiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DutchRijksMuseumApiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +108,13 @@
 		C17DB44129ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DutchRijksMuseumApiClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C17DB44529ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchRijksMuseumApiClientUITests.swift; sourceTree = "<group>"; };
 		C17DB44729ED2CEE00AE16D0 /* DutchRijksMuseumApiClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DutchRijksMuseumApiClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C186ED2A29EEADA50051EC70 /* AppServices+Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppServices+Detail.swift"; sourceTree = "<group>"; };
+		C186ED2C29EEAE180051EC70 /* DetailRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouting.swift; sourceTree = "<group>"; };
+		C186ED2E29EEB0130051EC70 /* DetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResult.swift; sourceTree = "<group>"; };
+		C186ED3029EEB1520051EC70 /* PrincipalMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalMaker.swift; sourceTree = "<group>"; };
+		C186ED3229EEB2090051EC70 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		C186ED3429EEBBF20051EC70 /* HeaderImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImage.swift; sourceTree = "<group>"; };
+		C187FCAD29EFC92900385CA6 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,8 +197,8 @@
 			children = (
 				C17A0A4829ED913B0030372A /* Model */,
 				C17A0A4929ED91510030372A /* DetailViewController.swift */,
-				C17A0A4B29ED915F0030372A /* DetailPresenter.swift */,
 				C17A0A4D29ED91760030372A /* DetailInteractor.swift */,
+				C17A0A4B29ED915F0030372A /* DetailPresenter.swift */,
 			);
 			path = DetailScene;
 			sourceTree = "<group>";
@@ -220,6 +230,7 @@
 				C17A0A5629ED993A0030372A /* Routing */,
 				C17A0A5829ED99560030372A /* AppServices.swift */,
 				C17A0A5D29ED9A680030372A /* AppServices+Collection.swift */,
+				C186ED2A29EEADA50051EC70 /* AppServices+Detail.swift */,
 			);
 			path = AppServices;
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				C17A0A5F29ED9A990030372A /* CollectionRouting.swift */,
+				C186ED2C29EEAE180051EC70 /* DetailRouting.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -239,22 +251,18 @@
 				C17A0A6129ED9D940030372A /* ArtObject.swift */,
 				C17A0A6329ED9DA10030372A /* Link.swift */,
 				C17A0A6529ED9DAC0030372A /* WebImage.swift */,
+				C186ED3029EEB1520051EC70 /* PrincipalMaker.swift */,
+				C186ED3229EEB2090051EC70 /* Label.swift */,
+				C186ED3429EEBBF20051EC70 /* HeaderImage.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C17A0A5A29ED99C10030372A /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				C17A0A5B29ED99D30030372A /* CollectionRepository.swift */,
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		C17A0A6729ED9DB20030372A /* Result */ = {
 			isa = PBXGroup;
 			children = (
 				C17A0A6829ED9DC50030372A /* CollectionResult.swift */,
+				C186ED2E29EEB0130051EC70 /* DetailResult.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -263,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				C17A0A6B29EDAFBC0030372A /* ArtViewCell.swift */,
-				C17A0A7229EDC1710030372A /* LoadingView.swift */,
 				C17A0A7429EDC9D30030372A /* CollectionHeader.swift */,
 			);
 			path = Views;
@@ -301,8 +308,8 @@
 		C17DB42329ED2CED00AE16D0 /* DutchRijksMuseumApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				C187FCAD29EFC92900385CA6 /* .swiftlint.yml */,
 				C17A0A6D29EDB0070030372A /* Extensions */,
-				C17A0A5A29ED99C10030372A /* Repository */,
 				C17A0A5529ED990E0030372A /* AppServices */,
 				C17A0A3829ED58E00030372A /* Scenes */,
 				C17A0A2929ED50120030372A /* Networking */,
@@ -341,6 +348,7 @@
 				C17DB41D29ED2CED00AE16D0 /* Sources */,
 				C17DB41E29ED2CED00AE16D0 /* Frameworks */,
 				C17DB41F29ED2CED00AE16D0 /* Resources */,
+				C187FCAF29EFD3B300385CA6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -435,6 +443,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C187FCAE29EFC92900385CA6 /* .swiftlint.yml in Resources */,
 				C17DB43129ED2CEE00AE16D0 /* LaunchScreen.storyboard in Resources */,
 				C17A0A3529ED516C0030372A /* Localizable.strings in Resources */,
 				C17DB42E29ED2CEE00AE16D0 /* Assets.xcassets in Resources */,
@@ -457,13 +466,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C187FCAF29EFD3B300385CA6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Adds support for Apple Silicon brew directory\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint #autocorrect --format\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C17DB41D29ED2CED00AE16D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C186ED3529EEBBF20051EC70 /* HeaderImage.swift in Sources */,
 				C17A0A5429ED933D0030372A /* DetailDataModel.swift in Sources */,
-				C17A0A5C29ED99D30030372A /* CollectionRepository.swift in Sources */,
 				C17A0A7529EDC9D30030372A /* CollectionHeader.swift in Sources */,
 				C17A0A6F29EDB0220030372A /* UIImageView+Extension.swift in Sources */,
 				C17A0A6629ED9DAC0030372A /* WebImage.swift in Sources */,
@@ -471,10 +501,12 @@
 				C17A0A3C29ED59470030372A /* CollectionViewController.swift in Sources */,
 				C17A0A3729ED519A0030372A /* String+Extension.swift in Sources */,
 				C17A0A6C29EDAFBC0030372A /* ArtViewCell.swift in Sources */,
+				C186ED3129EEB1520051EC70 /* PrincipalMaker.swift in Sources */,
 				C17A0A6429ED9DA10030372A /* Link.swift in Sources */,
 				C17A0A2D29ED50600030372A /* ApiManager.swift in Sources */,
 				C17A0A6029ED9A990030372A /* CollectionRouting.swift in Sources */,
 				C17A0A4029ED59600030372A /* CollectionInteractor.swift in Sources */,
+				C186ED3329EEB2090051EC70 /* Label.swift in Sources */,
 				C17A0A5029ED931C0030372A /* DetailDataRequest.swift in Sources */,
 				C17A0A4729ED5CE00030372A /* CollectionDataModel.swift in Sources */,
 				C17A0A4329ED5CB90030372A /* CollectionDataRequest.swift in Sources */,
@@ -484,12 +516,14 @@
 				C17A0A4529ED5CCD0030372A /* CollectionDataResponse.swift in Sources */,
 				C17A0A5229ED932D0030372A /* DetailDataResponse.swift in Sources */,
 				C17A0A3129ED50EB0030372A /* NetworkSession.swift in Sources */,
+				C186ED2B29EEADA50051EC70 /* AppServices+Detail.swift in Sources */,
+				C186ED2F29EEB0130051EC70 /* DetailResult.swift in Sources */,
 				C17A0A6229ED9D940030372A /* ArtObject.swift in Sources */,
 				C17A0A5E29ED9A680030372A /* AppServices+Collection.swift in Sources */,
-				C17A0A7329EDC1710030372A /* LoadingView.swift in Sources */,
 				C17A0A3E29ED59540030372A /* CollectionPresenter.swift in Sources */,
 				C17DB42529ED2CED00AE16D0 /* AppDelegate.swift in Sources */,
 				C17A0A3329ED51220030372A /* ServiceNetworkSession.swift in Sources */,
+				C186ED2D29EEAE180051EC70 /* DetailRouting.swift in Sources */,
 				C17A0A5929ED99560030372A /* AppServices.swift in Sources */,
 				C17A0A4A29ED91510030372A /* DetailViewController.swift in Sources */,
 				C17A0A4E29ED91760030372A /* DetailInteractor.swift in Sources */,

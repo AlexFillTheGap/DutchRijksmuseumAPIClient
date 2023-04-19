@@ -17,11 +17,9 @@ protocol CollectionInteractorProtocol {
 }
 
 class CollectionInteractor: CollectionInteractorProtocol {
-
   var appServices: AppServices
   var presenter: CollectionPresenterProtocol?
   var collectionItems: CollectionDataResponse?
-  var visitedItems: [CollectionDataItem] = []
   var pageNumber: Int = 1
   
   init(appServicesDependency: AppServices) {
@@ -29,8 +27,7 @@ class CollectionInteractor: CollectionInteractorProtocol {
   }
   
   func selectArt(item: CollectionDataRequest) {
-    appServices.collectionRepository.addVisitedElement(item.selectedItem)
-    let visited = self.getVisitedFromRepository()
+    self.presenter?.performDetailNavigation(detailItem: item.selectedItem)
   }
   
   func loadArts() {
@@ -40,22 +37,9 @@ class CollectionInteractor: CollectionInteractorProtocol {
         print(error)
       } else {
         guard let collection = collection else { return }
-        let visited = self.getVisitedFromRepository()
-        self.presenter?.setupCollectionData(data: collection, visited: visited, pageNumber: self.pageNumber)
+        self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
         self.presenter?.makeHideLoading()
       }
-    }
-  }
-  
-  private func getVisitedFromRepository() -> [CollectionDataItem] {
-    let visited = self.appServices.collectionRepository.getVisited()
-    switch visited {
-    case .empty:
-      return []
-    case .loaded(let value):
-      return value
-    case .failed( _):
-      return []
     }
   }
   
@@ -66,8 +50,7 @@ class CollectionInteractor: CollectionInteractorProtocol {
         print(error)
       } else {
         guard let collection = collectionDataResponse else { return }
-        let visited = self.getVisitedFromRepository()
-        self.presenter?.setupCollectionData(data: collection, visited: visited, pageNumber: self.pageNumber)
+        self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
         self.presenter?.makeHideLoading()
       }
     }
@@ -75,37 +58,34 @@ class CollectionInteractor: CollectionInteractorProtocol {
   
   
   func nextPage() {
-    if pageNumber<1000 {
+    if pageNumber < 1000 {
       presenter?.makeShowLoading()
       pageNumber += 1
-      appServices.collectionPage(pageNumber: pageNumber, completionHandler: { collectionDataResponse, error in
+      appServices.collectionPage(pageNumber: pageNumber) { collectionDataResponse, error in
         if error != nil {
           print(error)
         } else {
           guard let collection = collectionDataResponse else { return }
-          let visited = self.getVisitedFromRepository()
-          self.presenter?.setupCollectionData(data: collection, visited: visited, pageNumber: self.pageNumber)
+          self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
           self.presenter?.makeHideLoading()
         }
-      })
+      }
     }
   }
   
   func previousPage() {
-    if pageNumber>1 {
+    if pageNumber > 1 {
       presenter?.makeShowLoading()
       pageNumber -= 1
-      appServices.collectionPage(pageNumber: pageNumber, completionHandler: { collectionDataResponse, error in
+      appServices.collectionPage(pageNumber: pageNumber) { collectionDataResponse, error in
         if error != nil {
           print(error)
         } else {
           guard let collection = collectionDataResponse else { return }
-          let visited = self.getVisitedFromRepository()
-          self.presenter?.setupCollectionData(data: collection, visited: visited, pageNumber: self.pageNumber)
+          self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
           self.presenter?.makeHideLoading()
         }
-      })
+      }
     }
   }
-  
 }

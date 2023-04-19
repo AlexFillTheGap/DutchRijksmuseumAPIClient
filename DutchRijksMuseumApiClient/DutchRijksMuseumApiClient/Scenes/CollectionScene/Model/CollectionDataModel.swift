@@ -9,7 +9,6 @@ import Foundation
 
 public struct CollectionDataModel {
   var collectionDataList: [CollectionDataItem]
-  var collectionVisitedList: [CollectionDataItem]
   var pageNumber: Int
 }
 

@@ -9,19 +9,48 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-  func showLoading(){
-     LoadingView.alert = UIAlertController(title: nil, message: "loading_text".localized, preferredStyle: .alert)
+  static let loader: UIView = {
+    let loader = UIView()
+    loader.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
     
-    let indicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-    indicator.hidesWhenStopped = true
-    indicator.style = UIActivityIndicatorView.Style.medium
-    indicator.startAnimating();
+    let activity = UIActivityIndicatorView(style: .large)
+    activity.color = .orange
+    activity.startAnimating()
 
-    LoadingView.alert.view.addSubview(indicator)
-    present(LoadingView.alert, animated: true, completion: nil)
+    let label = UILabel()
+    label.text = "loading_text".localized
+    label.textAlignment = .center
+    label.textColor = .orange
+    
+    loader.addSubview(activity)
+    loader.addSubview(label)
+    
+    loader.translatesAutoresizingMaskIntoConstraints = false
+    activity.translatesAutoresizingMaskIntoConstraints = false
+    label.translatesAutoresizingMaskIntoConstraints = false
+    
+    NSLayoutConstraint.activate([
+      activity.centerYAnchor.constraint(equalTo: loader.centerYAnchor),
+      activity.centerXAnchor.constraint(equalTo: loader.centerXAnchor),
+      
+      label.topAnchor.constraint(equalTo: activity.bottomAnchor, constant: 16),
+      label.centerXAnchor.constraint(equalTo: activity.centerXAnchor)
+    ])
+    return loader
+  }()
+  
+  func showLoading() {
+    view.addSubview(UIViewController.loader)
+    
+    NSLayoutConstraint.activate([
+      UIViewController.loader.topAnchor.constraint(equalTo: view.topAnchor),
+      UIViewController.loader.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+      UIViewController.loader.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+      UIViewController.loader.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+    ])
   }
 
-  func hideLoading(){
-    LoadingView.alert.dismiss(animated: true, completion: nil)
+  func hideLoading() {
+    UIViewController.loader.removeFromSuperview()
   }
 }

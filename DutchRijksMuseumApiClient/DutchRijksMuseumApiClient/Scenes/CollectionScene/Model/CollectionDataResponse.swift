@@ -9,7 +9,6 @@ import Foundation
 
 public struct CollectionDataResponse {
   var collectionDataList: [CollectionResponseItem]
-  var collectionVisitedList: CollectionRepositoryState
   var pageNumber: Int
 }
 

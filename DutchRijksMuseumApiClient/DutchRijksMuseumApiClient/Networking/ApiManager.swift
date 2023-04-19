@@ -25,9 +25,11 @@ public class APIManager: APIManagerProtocol {
   public func performURLRequest(from router: APIRouter, completionHandler: @escaping (Data?, NSError?) -> Void) {
     do {
       let urlRequest = try router.createUrlRequest(withBaseURL: baseURL, withApiKey: apiKey)
-      //TODO: Handle the authenticated or anonymous request.
+      // TODO: Handle the authenticated or anonymous request.
       performURLRequest(for: urlRequest) { data, error in
-        completionHandler(data, error)
+        DispatchQueue.main.async {
+          completionHandler(data, error)
+        }
       }
     } catch {
       completionHandler(nil, NSError(domain: "com.appstore.rijksmuseum.APIManager", code: 3))
@@ -41,5 +43,5 @@ public class APIManager: APIManagerProtocol {
     }
   }
   
-  //TODO : Create perform URL Request for authenticated, bearer or tokenized request.
+  // TODO : Create perform URL Request for authenticated, bearer or tokenized request.
 }
