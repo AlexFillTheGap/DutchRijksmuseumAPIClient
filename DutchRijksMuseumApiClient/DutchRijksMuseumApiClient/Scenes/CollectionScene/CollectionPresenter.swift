@@ -12,6 +12,7 @@ protocol CollectionPresenterProtocol {
   func makeShowLoading()
   func makeHideLoading()
   func performDetailNavigation(detailItem: CollectionDataItem)
+  func showErrorAlert(title: String?, message: String?)
 }
 
 class CollectionPresenter: CollectionPresenterProtocol {
@@ -42,5 +43,9 @@ class CollectionPresenter: CollectionPresenterProtocol {
   
   func performDetailNavigation(detailItem: CollectionDataItem) {
     view?.goToDetail(item: detailItem)
+  }
+  
+  func showErrorAlert(title: String?, message: String?) {
+    view?.showAlert(title: title, message: message)
   }
 }

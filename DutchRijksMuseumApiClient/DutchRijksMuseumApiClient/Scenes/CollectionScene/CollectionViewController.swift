@@ -12,6 +12,7 @@ protocol CollectionViewControllerProtocol {
   func setupArtObjects(artObjects: CollectionDataModel)
   func needToShowLoading()
   func needToHideLoading()
+  func showAlert(title: String?, message: String?)
 }
 
 protocol CollectionViewControllerNavigation {
@@ -128,12 +129,20 @@ extension CollectionViewController: UICollectionViewDelegate,
 // swiftlint:enable force_cast
 
 extension CollectionViewController: CollectionViewControllerProtocol {
+  func showAlert(title: String?, message: String?) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "alert_ok".localized, style: .default) { _ in
+      alert.dismiss(animated: true)
+    })
+    present(alert, animated: true, completion: nil)
+  }
+  
   func needToShowLoading() {
-    self.showLoading()
+    showLoading()
   }
   
   func needToHideLoading() {
-    self.hideLoading()
+    hideLoading()
   }
   
   func setupArtObjects(artObjects: CollectionDataModel) {

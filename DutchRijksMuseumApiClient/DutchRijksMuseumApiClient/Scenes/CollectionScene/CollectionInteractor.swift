@@ -30,11 +30,20 @@ class CollectionInteractor: CollectionInteractorProtocol {
     self.presenter?.performDetailNavigation(detailItem: item.selectedItem)
   }
   
+  private func handelError(error: NSError?) {
+    let title = error?.userInfo[NSLocalizedDescriptionKey] as? String
+    let message = error?.userInfo[NSLocalizedRecoverySuggestionErrorKey] as? String
+    self.presenter?.showErrorAlert(
+      title: title,
+      message: message
+    )
+  }
+  
   func loadArts() {
     presenter?.makeShowLoading()
     appServices.collectionsArts { collection, error in
       if error != nil {
-        print(error)
+        self.handelError(error: error)
       } else {
         guard let collection = collection else { return }
         self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
@@ -47,7 +56,7 @@ class CollectionInteractor: CollectionInteractorProtocol {
     presenter?.makeShowLoading()
     appServices.collectionPage(pageNumber: pageNumber) { collectionDataResponse, error in
       if error != nil {
-        print(error)
+        self.handelError(error: error)
       } else {
         guard let collection = collectionDataResponse else { return }
         self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
@@ -63,7 +72,7 @@ class CollectionInteractor: CollectionInteractorProtocol {
       pageNumber += 1
       appServices.collectionPage(pageNumber: pageNumber) { collectionDataResponse, error in
         if error != nil {
-          print(error)
+          self.handelError(error: error)
         } else {
           guard let collection = collectionDataResponse else { return }
           self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)
@@ -79,7 +88,7 @@ class CollectionInteractor: CollectionInteractorProtocol {
       pageNumber -= 1
       appServices.collectionPage(pageNumber: pageNumber) { collectionDataResponse, error in
         if error != nil {
-          print(error)
+          self.handelError(error: error)
         } else {
           guard let collection = collectionDataResponse else { return }
           self.presenter?.setupCollectionData(data: collection, pageNumber: self.pageNumber)

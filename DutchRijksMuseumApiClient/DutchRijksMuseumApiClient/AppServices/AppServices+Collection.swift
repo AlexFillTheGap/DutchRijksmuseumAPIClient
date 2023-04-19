@@ -12,7 +12,7 @@ extension AppServices {
     let route = CollectionRouting.collection
     apiManager.performURLRequest(from: route) { data, error in
       if error != nil {
-        print("error collection arts")
+        completionHandler(nil, error)
       } else {
         guard let responseData = data else { return }
         
@@ -20,7 +20,15 @@ extension AppServices {
           let collection = try JSONDecoder().decode(CollectionResult.self, from: responseData)
           completionHandler(self.methodMapCollectionResult(collection: collection, pageNumber: 0), nil)
         } catch {
-          print("JSONSerialization error:", error)
+          let serializationError = NSError(
+            domain: "com.appstore.rijksmuseum.ServiceNetworkSession",
+            code: 0,
+            userInfo: [
+              NSLocalizedDescriptionKey: "response_serialization_title".localized,
+              NSLocalizedRecoverySuggestionErrorKey: "response_serialization_message".localized
+            ]
+          )
+          completionHandler(nil, serializationError)
         }
       }
     }
@@ -33,7 +41,7 @@ extension AppServices {
     let route = CollectionRouting.collectionPage(page: pageNumber)
     apiManager.performURLRequest(from: route) { data, error in
       if error != nil {
-        print("error collection arts")
+        completionHandler(nil, error)
       } else {
         guard let responseData = data else { return }
         
@@ -41,7 +49,15 @@ extension AppServices {
           let collection = try JSONDecoder().decode(CollectionResult.self, from: responseData)
           completionHandler(self.methodMapCollectionResult(collection: collection, pageNumber: pageNumber), nil)
         } catch {
-          print("JSONSerialization error:", error)
+          let serializationError = NSError(
+            domain: "com.appstore.rijksmuseum.ServiceNetworkSession",
+            code: 0,
+            userInfo: [
+              NSLocalizedDescriptionKey: "response_serialization_title".localized,
+              NSLocalizedRecoverySuggestionErrorKey: "response_serialization_message".localized
+            ]
+          )
+          completionHandler(nil, serializationError)
         }
       }
     }

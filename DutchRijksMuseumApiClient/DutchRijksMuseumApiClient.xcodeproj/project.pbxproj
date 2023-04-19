@@ -146,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				C17A0A2B29ED504C0030372A /* Session */,
-				C17A0A2A29ED50430030372A /* Resources */,
 				C17A0A2C29ED50600030372A /* ApiManager.swift */,
 				C17A0A2E29ED506C0030372A /* ApiRouter.swift */,
 			);
@@ -157,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				C17A0A3429ED516C0030372A /* Localizable.strings */,
-				C17A0A3629ED519A0030372A /* String+Extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -279,6 +277,7 @@
 		C17A0A6D29EDB0070030372A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C17A0A3629ED519A0030372A /* String+Extension.swift */,
 				C17A0A6E29EDB0220030372A /* UIImageView+Extension.swift */,
 				C17A0A7029EDC0DE0030372A /* UIViewController+Extension.swift */,
 			);
@@ -308,11 +307,12 @@
 		C17DB42329ED2CED00AE16D0 /* DutchRijksMuseumApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				C17A0A2A29ED50430030372A /* Resources */,
 				C187FCAD29EFC92900385CA6 /* .swiftlint.yml */,
 				C17A0A6D29EDB0070030372A /* Extensions */,
+				C17A0A2929ED50120030372A /* Networking */,
 				C17A0A5529ED990E0030372A /* AppServices */,
 				C17A0A3829ED58E00030372A /* Scenes */,
-				C17A0A2929ED50120030372A /* Networking */,
 				C17DB42429ED2CED00AE16D0 /* AppDelegate.swift */,
 				C17DB42D29ED2CEE00AE16D0 /* Assets.xcassets */,
 				C17DB42F29ED2CEE00AE16D0 /* LaunchScreen.storyboard */,

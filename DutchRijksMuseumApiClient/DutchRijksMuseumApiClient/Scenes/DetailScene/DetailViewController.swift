@@ -11,6 +11,7 @@ protocol DetailViewControllerProtocol {
   func setupArtObject(artObjects: DetailDataModel)
   func needToShowLoading()
   func needToHideLoading()
+  func showAlert(title: String?, message: String?)
 }
 
 class DetailViewController: UIViewController {
@@ -135,6 +136,15 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewControllerProtocol {
+  func showAlert(title: String?, message: String?) {
+    let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "alert_ok".localized, style: .default) { _ in
+      alert.dismiss(animated: true)
+      self.navigationController?.popViewController(animated: true)
+    })
+    present(alert, animated: true, completion: nil)
+  }
+  
   func setupArtObject(artObjects: DetailDataModel) {
     title = artObjects.title
     objectImage.download(from: artObjects.imageUrl)

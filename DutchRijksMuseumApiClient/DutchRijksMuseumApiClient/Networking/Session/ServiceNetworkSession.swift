@@ -18,16 +18,56 @@ public class ServiceNetworkSession: NetworkSession {
   )
   
   func doRequest(for req: URLRequest, completionHandler: @escaping (Data?, NSError?) -> Void) {
-    let task = URLSession.shared.dataTask(with: req) { data, _, error in
-      guard error == nil, let data = data else {
-        completionHandler(nil, NSError(domain: "com.appstore.rijksmuseum.ServiceNetworkSession", code: 0))
+    let task = URLSession.shared.dataTask(with: req) { data, urlResponse, error in
+      guard let response = urlResponse as? HTTPURLResponse else {
+        completionHandler(nil, self.responseFormatError)
         return
       }
-      do {
-        completionHandler(data, nil)
-      } catch _ {
-        completionHandler(nil, NSError(domain: "com.appstore.rijksmuseum.ServiceNetworkSession", code: 1))
+      if response.statusCode >= 400, response.statusCode <= 499 {
+        let error = NSError(
+          domain: "com.appstore.rijksmuseum.ServiceNetworkSession",
+          code: response.statusCode,
+          userInfo: [
+            NSLocalizedDescriptionKey: "data_error_title".localized,
+            NSLocalizedRecoverySuggestionErrorKey: "data_error_message".localized
+          ]
+        )
+        completionHandler(nil, error)
+        return
+      } else if response.statusCode >= 500, response.statusCode <= 599 {
+        let error = NSError(
+          domain: "com.appstore.rijksmuseum.ServiceNetworkSession",
+          code: response.statusCode,
+          userInfo: [
+            NSLocalizedDescriptionKey: "request_error_title".localized,
+            NSLocalizedRecoverySuggestionErrorKey: "request_error_message".localized
+          ]
+        )
+        completionHandler(nil, error)
+        return
       }
+      
+      guard error == nil, let data = data else {
+        var message = ""
+        if let error = error as? URLError {
+          switch error.code {
+          case .timedOut:
+            message = "request_timeout".localized
+          default:
+            message = "request_unknown".localized
+          }
+        }
+        let error = NSError(
+          domain: "com.appstore.rijksmuseum.ServiceNetworkSession",
+          code: response.statusCode,
+          userInfo: [
+            NSLocalizedDescriptionKey: message
+          ]
+        )
+        completionHandler(nil, error)
+        return
+      }
+      completionHandler(data, nil)
     }
     task.resume()
   }
