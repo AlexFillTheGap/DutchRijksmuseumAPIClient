@@ -7,33 +7,7 @@
 
 import Foundation
 
-extension AppServices {
-  public func collectionsArts(completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void) {
-    let route = CollectionRouting.collection
-    apiManager.performURLRequest(from: route) { data, error in
-      if error != nil {
-        completionHandler(nil, error)
-      } else {
-        guard let responseData = data else { return }
-        
-        do {
-          let collection = try JSONDecoder().decode(CollectionResult.self, from: responseData)
-          completionHandler(self.methodMapCollectionResult(collection: collection, pageNumber: 0), nil)
-        } catch {
-          let serializationError = NSError(
-            domain: "com.appstore.rijksmuseum.ServiceNetworkSession",
-            code: 0,
-            userInfo: [
-              NSLocalizedDescriptionKey: "response_serialization_title".localized,
-              NSLocalizedRecoverySuggestionErrorKey: "response_serialization_message".localized
-            ]
-          )
-          completionHandler(nil, serializationError)
-        }
-      }
-    }
-  }
-  
+extension AppServices: AppServiceCollectionProtocol {
   public func collectionPage(
     pageNumber: Int,
     completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void

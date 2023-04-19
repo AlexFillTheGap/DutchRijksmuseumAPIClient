@@ -78,7 +78,7 @@ class DetailViewController: UIViewController {
     return label
   }()
   
-  required init(appServices: AppServices, selectedItem: CollectionDataItem) {
+  required init(appServices: AppServiceDetailProtocol, selectedItem: CollectionDataItem) {
     self.selectedItem = selectedItem
     super.init(nibName: nil, bundle: nil)
     let interactor = DetailInteractor(appServicesDependency: appServices)

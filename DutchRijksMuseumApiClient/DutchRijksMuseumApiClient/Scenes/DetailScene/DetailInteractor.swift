@@ -8,15 +8,15 @@
 import Foundation
 
 protocol DetailInteractorProtocol {
-  var appServices: AppServices { get set }
+  var appServices: AppServiceDetailProtocol { get set }
   func loadArtDetais(objectId: String)
 }
 
 class DetailInteractor: DetailInteractorProtocol {
-  var appServices: AppServices
+  var appServices: AppServiceDetailProtocol
   var presenter: DetailPresenterProtocol?
   
-  init(appServicesDependency: AppServices) {
+  init(appServicesDependency: AppServiceDetailProtocol) {
     appServices = appServicesDependency
   }
   

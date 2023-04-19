@@ -8,7 +8,9 @@
 import UIKit
 
 protocol CollectionViewControllerProtocol {
-  func configureViewController(appService: AppServices) -> CollectionViewController
+  func configureViewController(
+    appService: (AppServiceCollectionProtocol & AppServiceDetailProtocol)
+  ) -> CollectionViewController
   func setupArtObjects(artObjects: CollectionDataModel)
   func needToShowLoading()
   func needToHideLoading()
@@ -151,7 +153,9 @@ extension CollectionViewController: CollectionViewControllerProtocol {
     isRefreshing = false
   }
   
-  func configureViewController(appService: AppServices) -> CollectionViewController {
+  func configureViewController(
+    appService: (AppServiceCollectionProtocol & AppServiceDetailProtocol)
+  ) -> CollectionViewController {
     let interactor = CollectionInteractor(appServicesDependency: appService)
     let presenter = CollectionPresenter()
     self.interactor = interactor
@@ -163,7 +167,7 @@ extension CollectionViewController: CollectionViewControllerProtocol {
 
 extension CollectionViewController: CollectionViewControllerNavigation {
   func goToDetail(item: CollectionDataItem) {
-    guard let appServices = interactor?.appServices else { return }
+    guard let appServices = interactor?.appServices as? AppServiceDetailProtocol else { return }
     let detailVC = DetailViewController(appServices: appServices, selectedItem: item)
     navigationController?.show(detailVC, sender: nil)
   }

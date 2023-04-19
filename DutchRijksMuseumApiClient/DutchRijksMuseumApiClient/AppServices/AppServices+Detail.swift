@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension AppServices {
+extension AppServices: AppServiceDetailProtocol {
   public func detailedArt(objectId: String, completionHandler: @escaping (DetailDataResponse?, NSError?) -> Void) {
     let route = DetailRouting.detail(artId: objectId)
     apiManager.performURLRequest(from: route) { data, error in

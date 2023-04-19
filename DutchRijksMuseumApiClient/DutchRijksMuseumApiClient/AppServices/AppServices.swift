@@ -7,6 +7,17 @@
 
 import Foundation
 
+protocol AppServiceDetailProtocol {
+  func detailedArt(objectId: String, completionHandler: @escaping (DetailDataResponse?, NSError?) -> Void)
+}
+
+protocol AppServiceCollectionProtocol {
+  func collectionPage(
+    pageNumber: Int,
+    completionHandler: @escaping (CollectionDataResponse?, NSError?) -> Void
+  )
+}
+
 public class AppServices {
   let apiManager: APIManagerProtocol
   

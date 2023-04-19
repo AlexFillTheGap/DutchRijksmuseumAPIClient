@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C124FAAA29F013BF00C2FCEE /* DetailInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124FAA929F013BF00C2FCEE /* DetailInteractorTest.swift */; };
+		C124FAAC29F0144600C2FCEE /* DetailViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124FAAB29F0144600C2FCEE /* DetailViewControllerTest.swift */; };
+		C124FAAE29F0146A00C2FCEE /* DetailPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124FAAD29F0146A00C2FCEE /* DetailPresenterTest.swift */; };
+		C124FAB129F0182F00C2FCEE /* CollectionInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124FAB029F0182F00C2FCEE /* CollectionInteractorTest.swift */; };
+		C124FAB329F01EC400C2FCEE /* CollectionPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124FAB229F01EC400C2FCEE /* CollectionPresenterTest.swift */; };
+		C124FAB529F0230500C2FCEE /* CollectionViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C124FAB429F0230500C2FCEE /* CollectionViewControllerTest.swift */; };
 		C17A0A2D29ED50600030372A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A2C29ED50600030372A /* ApiManager.swift */; };
 		C17A0A2F29ED506C0030372A /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A2E29ED506C0030372A /* ApiRouter.swift */; };
 		C17A0A3129ED50EB0030372A /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17A0A3029ED50EB0030372A /* NetworkSession.swift */; };
@@ -69,6 +75,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C124FAA929F013BF00C2FCEE /* DetailInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTest.swift; sourceTree = "<group>"; };
+		C124FAAB29F0144600C2FCEE /* DetailViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTest.swift; sourceTree = "<group>"; };
+		C124FAAD29F0146A00C2FCEE /* DetailPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTest.swift; sourceTree = "<group>"; };
+		C124FAB029F0182F00C2FCEE /* CollectionInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionInteractorTest.swift; sourceTree = "<group>"; };
+		C124FAB229F01EC400C2FCEE /* CollectionPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPresenterTest.swift; sourceTree = "<group>"; };
+		C124FAB429F0230500C2FCEE /* CollectionViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewControllerTest.swift; sourceTree = "<group>"; };
 		C17A0A2C29ED50600030372A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		C17A0A2E29ED506C0030372A /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		C17A0A3029ED50EB0030372A /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
@@ -142,6 +154,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C124FAA729F0138F00C2FCEE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C124FAAF29F0180F00C2FCEE /* CollectionScene */,
+				C124FAA829F0139F00C2FCEE /* DetailScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C124FAA829F0139F00C2FCEE /* DetailScene */ = {
+			isa = PBXGroup;
+			children = (
+				C124FAAB29F0144600C2FCEE /* DetailViewControllerTest.swift */,
+				C124FAA929F013BF00C2FCEE /* DetailInteractorTest.swift */,
+				C124FAAD29F0146A00C2FCEE /* DetailPresenterTest.swift */,
+			);
+			path = DetailScene;
+			sourceTree = "<group>";
+		};
+		C124FAAF29F0180F00C2FCEE /* CollectionScene */ = {
+			isa = PBXGroup;
+			children = (
+				C124FAB429F0230500C2FCEE /* CollectionViewControllerTest.swift */,
+				C124FAB029F0182F00C2FCEE /* CollectionInteractorTest.swift */,
+				C124FAB229F01EC400C2FCEE /* CollectionPresenterTest.swift */,
+			);
+			path = CollectionScene;
+			sourceTree = "<group>";
+		};
 		C17A0A2929ED50120030372A /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +365,7 @@
 		C17DB43A29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests */ = {
 			isa = PBXGroup;
 			children = (
+				C124FAA729F0138F00C2FCEE /* Scenes */,
 				C17DB43B29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests.swift */,
 			);
 			path = DutchRijksMuseumApiClientTests;
@@ -534,7 +576,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C124FAB329F01EC400C2FCEE /* CollectionPresenterTest.swift in Sources */,
 				C17DB43C29ED2CEE00AE16D0 /* DutchRijksMuseumApiClientTests.swift in Sources */,
+				C124FAAA29F013BF00C2FCEE /* DetailInteractorTest.swift in Sources */,
+				C124FAAC29F0144600C2FCEE /* DetailViewControllerTest.swift in Sources */,
+				C124FAB129F0182F00C2FCEE /* CollectionInteractorTest.swift in Sources */,
+				C124FAB529F0230500C2FCEE /* CollectionViewControllerTest.swift in Sources */,
+				C124FAAE29F0146A00C2FCEE /* DetailPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
