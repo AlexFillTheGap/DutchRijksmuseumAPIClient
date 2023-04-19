@@ -38,7 +38,7 @@ final class CollectionPresenterTest: XCTestCase {
     XCTAssertTrue(view.needToHideLoadingSpy, "the view will hide the loading view")
   }
 
-  func testPerformDetailNavigation(detailItem: CollectionDataItem) {
+  func testPerformDetailNavigation() {
     sut.performDetailNavigation(detailItem: CollectionDataItem(
       artObjectId: "",
       title: "",
@@ -50,7 +50,7 @@ final class CollectionPresenterTest: XCTestCase {
     XCTAssertTrue(view.goToDetailSpy, "the view should navigate to the detail view")
   }
 
-  func testShowErrorAlert(title: String?, message: String?) {
+  func testShowErrorAlert() {
     sut.showErrorAlert(title: "title", message: "message")
     XCTAssertTrue(view.showAlertSpy, "The presenter request the view to show the alert view with title and message")
   }

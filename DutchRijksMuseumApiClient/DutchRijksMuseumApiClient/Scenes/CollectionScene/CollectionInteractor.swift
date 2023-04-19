@@ -50,7 +50,6 @@ class CollectionInteractor: CollectionInteractorProtocol {
     }
   }
   
-  
   func nextPage() {
     if pageNumber < 1000 {
       presenter?.makeShowLoading()

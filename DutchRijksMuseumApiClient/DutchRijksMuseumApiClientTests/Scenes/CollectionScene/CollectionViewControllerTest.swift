@@ -13,7 +13,6 @@ final class CollectionViewControllerTest: XCTestCase {
   var interactor: CollectionInteractorSpy!
 
   override func setUpWithError() throws {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
     do {
       try super.setUpWithError()
 
@@ -23,14 +22,6 @@ final class CollectionViewControllerTest: XCTestCase {
     } catch {
       fatalError("error on setting up")
     }
-  }
-
-  func testSetupArtObjects(artObjects: CollectionDataModel) {
-    sut.setupArtObjects(artObjects:
-                          CollectionDataModel(
-                            collectionDataList: [],
-                            pageNumber: 1)
-    )
   }
 
   func testNeedToShowLoading() {

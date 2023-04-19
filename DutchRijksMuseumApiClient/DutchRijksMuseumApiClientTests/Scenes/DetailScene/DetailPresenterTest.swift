@@ -70,7 +70,7 @@ final class DetailPresenterTest: XCTestCase {
     XCTAssertTrue(view.needToHideLoadingSpy, "The presenter need to hide the loading view")
   }
 
-  func testShowErrorAlert(title: String?, message: String?) {
+  func testShowErrorAlert() {
     sut.showErrorAlert(title: "fake title", message: "fake message")
     XCTAssertTrue(view.showAlertSpy, "The presenter wants to show an alert view with a message and title")
   }

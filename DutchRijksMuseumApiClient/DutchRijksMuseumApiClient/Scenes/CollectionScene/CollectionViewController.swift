@@ -79,10 +79,9 @@ class CollectionViewController: UIViewController {
   }
 }
 
-// swiftlint:disable force_cast
 extension CollectionViewController: UICollectionViewDelegate,
-                                      UICollectionViewDataSource,
-                                      UICollectionViewDelegateFlowLayout {
+                                    UICollectionViewDataSource,
+                                    UICollectionViewDelegateFlowLayout {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     collectionDataSource.count
   }
@@ -96,9 +95,10 @@ extension CollectionViewController: UICollectionViewDelegate,
       ofKind: kind,
       withReuseIdentifier: "headerId",
       for: indexPath
-    ) as! CollectionHeader
-    headerView.titleLabel.text = String(format: "arts_header_title".localized, indexPath.section + 1)
-    return headerView
+    )
+    guard let collectionHeaderView = headerView as? CollectionHeader else { return headerView }
+    collectionHeaderView.titleLabel.text = String(format: "arts_header_title".localized, indexPath.section + 1)
+    return collectionHeaderView
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -106,12 +106,12 @@ extension CollectionViewController: UICollectionViewDelegate,
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ArtViewCell
-    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+    guard let artCell = cell as? ArtViewCell else { return cell }
     let item = collectionDataSource[indexPath.section][indexPath.row]
     
-    cell.configureCell(data: ArtViewCellData(artImageUrl: item.image, title: item.title))
-    return cell
+    artCell.configureCell(data: ArtViewCellData(artImageUrl: item.image, title: item.title))
+    return artCell
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -128,7 +128,6 @@ extension CollectionViewController: UICollectionViewDelegate,
     }
   }
 }
-// swiftlint:enable force_cast
 
 extension CollectionViewController: CollectionViewControllerProtocol {
   func showAlert(title: String?, message: String?) {
